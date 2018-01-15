@@ -9,6 +9,7 @@ exports.config = {
         browserName: process.env.TEST_BROWSER_NAME || "chrome"
     },
     baseUrl: "https://frontend.blanco-tst.cloud/en/?tenant_id=0001",
+    ignoreUncaughtExceptions: true,
     framework: "custom",
     frameworkPath: require.resolve("protractor-cucumber-framework"),
     specs: ["../features/*.feature"],
