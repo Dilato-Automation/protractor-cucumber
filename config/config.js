@@ -6,7 +6,10 @@ const htmlPath = path.resolve(process.cwd(),'output');
 exports.config = {
     seleniumAddress: "http://localhost:4444/wd/hub",
     capabilities: {
-        browserName: process.env.TEST_BROWSER_NAME || "chrome"
+        browserName: "chrome",
+        chromeOptions: {
+            args: [ "--headless", "--disable-gpu", "--window-size=1366,768" ]
+        }
     },
     baseUrl: "https://frontend.blanco-tst.cloud/en/?tenant_id=0001",
     ignoreUncaughtExceptions: true,
