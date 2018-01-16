@@ -24,7 +24,7 @@ exports.config = {
     onPrepare: function() {
         browser.ignoreSynchronization = true;
         browser.manage().window().maximize();
-        browser.manage().timeouts().implicitlyWait(30000);
+        browser.manage().timeouts().implicitlyWait(10000);
         reporter.createDirectory(htmlPath);
         require('babel-register');
     },

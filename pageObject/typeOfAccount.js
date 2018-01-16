@@ -1,6 +1,6 @@
 class typeOfAccount{
     constructor(){
-        this.myselfPersonalAccount = element(by.xpath('//html/body/app-root/button[1]'));
+        this.myselfPersonalAccount = element(by.xpath('/html/body/app-root/app-introduction/a[1]'));
         this.firstName = element(by.xpath('//input[@id="firstName"]'));
         this.nextButtonForFirstName = element(by.xpath('//button[@name="submit"]'));
         this.lastName = element(by.xpath('//*[@id="lastName"]'));

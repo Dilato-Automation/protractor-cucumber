@@ -3,7 +3,7 @@ import {setDefaultTimeout} from "cucumber";
 const Cucumber = require("cucumber");
 const { BeforeAll, After, Status } = require("cucumber");
 const conf = require("../config/config").config;
-setDefaultTimeout(60 * 1000);
+setDefaultTimeout(10 * 1000);
 
 BeforeAll(function() {
   return browser.get(conf.baseUrl);
