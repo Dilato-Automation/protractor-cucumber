@@ -8,7 +8,7 @@ exports.config = {
     capabilities: {
         browserName: "chrome",
         chromeOptions: {
-            args: [ "--headless", "--disable-gpu", "--window-size=1366,768" ]
+            args: [  "--privileged", "--no-sandbox", "--headless", "--disable-gpu", "--window-size=1366,768" ]
         }
     },
     baseUrl: "https://frontend.blanco-tst.cloud/en/?tenant_id=0001",
@@ -24,7 +24,7 @@ exports.config = {
     onPrepare: function() {
         browser.ignoreSynchronization = true;
         browser.manage().window().maximize();
-        browser.manage().timeouts().implicitlyWait(10000);
+        browser.manage().timeouts().implicitlyWait(30000);
         reporter.createDirectory(htmlPath);
         require('babel-register');
     },
